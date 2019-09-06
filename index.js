@@ -14,7 +14,7 @@ csvtoJSON().fromFile("deliveries.csv").then((jsonArrayObj)=>
 })
 const matches=require('./matches-JSON-File.json')
 const deliveries=require('./deliveries-JSON-File.json')
-//console.log(deliveries)
+// ****************First Function******************************
 function matchesPerYear()  // Function matchesPerYear 
 {
     let matchesPerYear=matches.reduce((accumulator,year)=>
@@ -32,22 +32,20 @@ function matchesPerYear()  // Function matchesPerYear
    matchesPerYears={"year":Object.keys(matchesPerYear),"Matches":Object.values(matchesPerYear)};
    return matchesPerYears;
 }
+// ********************Second Function*******************************
 
-// function matchesWonPerYear()
-// {
-//     let matchesWonPerYear=matches.reduce((accumulator,cv)=>
-//     {
-//         if(cv.winner!==" ")
-//         {
-//             accumulator[cv.winner]=(accumulator[cv.winner] || {});
-//         }
-//     },{})
-//     console.log(matchesWonPerYear);
-// }
+
+
+
+
+
+
 
 //Function Calling
 matchesPerYear()
-// matchesWonPerYear()
+// let teamStat= (matchesWonPerYear());
+// let extraRunStat =extraRunConceded();
+
 
 
 
@@ -69,8 +67,9 @@ matchesPerYear()
 
 
 // ***********************************************************************************
-//let data={matchesPerYears,teamStat};
 let data={matchesPerYears};
+// let data={matchesPerYears,teamStat,extraRunStat};
+//let data={matchesPerYears};
 
 (async () => {
     await writeJSONFile('public/data.json', data);

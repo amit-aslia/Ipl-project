@@ -1,5 +1,6 @@
 function matchesPerYear(dataSet){
-    var matchesPerYear= dataSet.reduce((acc,year) => {
+    var matchesPerYear= dataSet
+    .reduce((acc,year) => {
          if(acc[year.season]){
              acc[year.season]++;
          }
