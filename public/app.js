@@ -147,6 +147,41 @@ Highcharts.chart('container2', {
 ]
 });
 
+Highcharts.chart('container3', {
+    chart:{
+        inverted:false,
+        polar:false
+    },
+
+    title: {
+        text: 'Extra Run conceded by a Team'
+    },
+
+    subtitle: {
+        text: 'Visualizing IPL Data Set'
+    },
+
+    xAxis: {
+        categories: data.extraRunStat.TeamsOf2016Season
+       
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Extra Run Conceded per Team'
+        }
+    },
+
+    series: [{
+        type: 'column',
+        colorByPoint: true,
+        data: data.extraRunStat.valuePerYear,
+        showInLegend: false
+    }]
+
+});
+
+
 
 
 
