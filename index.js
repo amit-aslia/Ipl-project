@@ -74,13 +74,12 @@ let teamStat= (matchesWonPerYear());
 })();
 
 
-=======
-    },{});
+
     let extraRunStat={"TeamsOf2016Season":Object.keys(extraRunsPerTeam),"valuePerYear":Object.values(extraRunsPerTeam)};
     //console.log(extraRunStat);
     return extraRunStat;
     
     
-    }
     
->>>>>>> visualization_3
+    
+
