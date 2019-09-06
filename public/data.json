@@ -212,5 +212,27 @@
 				"2017": 0
 			}
 		]
+	},
+	"extraRunStat": {
+		"TeamsOf2016Season": [
+			"Rising Pune Supergiants",
+			"Mumbai Indians",
+			"Kolkata Knight Riders",
+			"Delhi Daredevils",
+			"Gujarat Lions",
+			"Kings XI Punjab",
+			"Sunrisers Hyderabad",
+			"Royal Challengers Bangalore"
+		],
+		"valuePerYear": [
+			108,
+			102,
+			122,
+			106,
+			98,
+			100,
+			107,
+			156
+		]
 	}
 }
