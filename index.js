@@ -86,10 +86,10 @@ function extraRunConceded() {
     let extraRunStat = { "TeamsOf2016Season": Object.keys(extraRunsPerTeam), "valuePerYear": Object.values(extraRunsPerTeam) };
     // console.log(extraRunStat);
     return extraRunStat;
-    
-    
-    }
-    
+
+
+}
+
 
 /******************Visualization-4******************************************** */
 function topTenEconomicalBowler() {
@@ -124,9 +124,9 @@ function topTenEconomicalBowler() {
     }, {});
     //console.log(noOfRuns)
     var totalBallsByBowler = Object.values(noOfBowls)
-     //console.log(totalBallsByBowler)
+    //console.log(totalBallsByBowler)
     var bowlerName = Object.keys(noOfBowls);
-    
+
     //console.log(bowlerName);
     var totalRunsGivenByBowler = Object.values(noOfRuns)
     //console.log(totalRunsGivenByBowler.length)
@@ -151,17 +151,15 @@ function topTenEconomicalBowler() {
 
 //Function Calling
 matchesPerYear()
-let teamStat= (matchesWonPerYear());
-let extraRunStat =extraRunConceded();
-let topTenEconomicalBowlerStat=topTenEconomicalBowler();
+let teamStat = (matchesWonPerYear());
+let extraRunStat = extraRunConceded();
+let topTenEconomicalBowlerStat = topTenEconomicalBowler();
 
 
 
 
 // ***********************************************************************************
-
-
- let data={matchesPerYears,teamStat,extraRunStat,topTenEconomicalBowlerStat};
+let data = { matchesPerYears, teamStat, extraRunStat, topTenEconomicalBowlerStat };
 
 (async () => {
     await writeJSONFile('public/data.json', data);
