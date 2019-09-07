@@ -180,6 +180,39 @@ Highcharts.chart('container3', {
     }]
 
 });
+Highcharts.chart('container4', {
+    chart:{
+        inverted:false,
+        polar:false
+    },
+
+    title: {
+        text: 'Top ten Economical Bowlers'
+    },
+
+    subtitle: {
+        text: 'Visualizing IPL Data Set'
+    },
+
+    xAxis: {
+        categories: data.topTenEconomicalBowlerStat.nameofBowlers
+       
+    },
+    yAxis: {
+        min: 0,
+        title: {
+            text: 'Economy'
+        }
+    },
+
+    series: [{
+        type: 'column',
+        colorByPoint: true,
+        data: data.topTenEconomicalBowlerStat.economy,
+        showInLegend: false
+    }]
+
+});
 
 
 
