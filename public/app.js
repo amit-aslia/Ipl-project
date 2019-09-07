@@ -185,7 +185,6 @@ Highcharts.chart('container3', {
 
 
 
-
 }
 
 fetchAndVisualizeData();
