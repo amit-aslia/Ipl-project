@@ -1,16 +1,11 @@
-function matchesPerYear(dataSet) {
-    var matchesPerYear = dataSet
-        .reduce((acc, year) => {
-            if (acc[year.season]) {
-                acc[year.season]++;
-            }
-            else {
-                acc[year.season] = 1;
-            }
-            return acc;
-        }, {});
-    return matchesPerYear;
-
+function matchesPerYear(matches)  // Function matchesPerYear 
+{
+    let matchesPerYear = matches.reduce((accumulator, year) => {
+        accumulator[year.season] = (accumulator[year.season] || 0) + 1;
+        return accumulator;
+    }, {});
+    matchesPerYears = { "year": Object.keys(matchesPerYear), "Matches": Object.values(matchesPerYear) };
+    return matchesPerYears;
 }
 
 module.exports = matchesPerYear;

@@ -2,7 +2,7 @@ let matchesPerYear = require("../ipl/matchesPerYear");
 
 describe("Matches Played per season", () => {
   it("Matches Played in Every Season", () => {
-    const dataSet= [
+    const matches= [
       {season:2013},
       {season:2013},
       {season:2013},
@@ -13,15 +13,15 @@ describe("Matches Played per season", () => {
       {season:2011},	 
     ];
     const expectedOutput = {
-      '2013':3,
-      '2009':2,
-      '2011':3
+      "year":["2009","2011","2013"],
+      "Matches":[2,3,3]
     };
-    expect(matchesPerYear(dataSet)).toEqual(expectedOutput);
+    expect(matchesPerYear(matches)).toEqual(expectedOutput);
   });
   it("Matches Played if there is no data in dataset", () => {
     const dataSet = [];
-    const expectedOutput = {};
+    const expectedOutput = {"Matches":[],
+                             "year":[] };
     expect(matchesPerYear(dataSet)).toEqual(expectedOutput);
   });
 })
