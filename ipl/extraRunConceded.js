@@ -3,7 +3,7 @@
 function extraRunConceded(matches, deliveries) {
   const idOf2016Matches=matches.filter((checkForYear)=>{
     if (checkForYear.season=='2016') {
-      return checkForYear;
+      return true;
     }
   }).map((checkId)=> {
     return checkId.id;
@@ -11,7 +11,7 @@ function extraRunConceded(matches, deliveries) {
   // console.log(idOf2016Matches)
   const detailsOf2016Matches=deliveries.filter((check)=> {
     if (idOf2016Matches.includes(check.match_id)) {
-      return check;
+      return true;
     }
   });
   // console.log(detailsOf2016Matches);

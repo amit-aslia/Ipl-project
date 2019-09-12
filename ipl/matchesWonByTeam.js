@@ -11,7 +11,7 @@ function matchesWonPerYear(matches) {
     return acc;
   }, []);
   delete team[''];
-  console.log(team);
+  // console.log(team);
   const teams = Object.keys(team).map(function(key) {
     return key;
   });
@@ -20,7 +20,7 @@ function matchesWonPerYear(matches) {
   // console.log(teams)
   const matchesWonPerYear = matches.filter((checkWinner) => {
     if (checkWinner.winner != ' ') {
-      return checkWinner;
+      return true;
     }
   }).reduce((acc, match) => {
     acc[match.winner] = (acc[match.winner] || Object.assign({}, years));

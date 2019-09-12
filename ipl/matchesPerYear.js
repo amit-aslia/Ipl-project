@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
 function matchesPerYear(dataSet) {
   const matchesPerYear = dataSet

@@ -3,7 +3,7 @@
 function topTenEconomicalBowler(matches, deliveries) {
   const idOf2015Matches = matches.filter((checkForYear) => {
     if (checkForYear.season == '2015') {
-      return checkForYear;
+      return true;
     }
   }).map((checkId) => {
     return checkId.id;
@@ -11,7 +11,7 @@ function topTenEconomicalBowler(matches, deliveries) {
   // console.log(idOf2015Matches)
   const detailsOf2015Matches = deliveries.filter((check) => {
     if (idOf2015Matches.includes(check.match_id)) {
-      return check;
+      return true;
     }
   });
   // console.log(detailsOf2015Matches);
