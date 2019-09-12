@@ -12,13 +12,12 @@ function fetchAndVisualizeData() {
 function visualizeData(data) {
   const teams=data.teamStat.Team;
   const score=data.teamStat.valuePerYear;
-  const yearResult=teams.reduce((acc, currentValue, index)=>{
+  const yearResult=teams.map((currentValue, index)=>{
     const toCreateDataOfEachTeam={};
     toCreateDataOfEachTeam['name']=currentValue;
-    toCreateDataOfEachTeam['data']=Object.values(score[index]);
-    acc.push(toCreateDataOfEachTeam);
-    return acc;
-  }, []);
+    toCreateDataOfEachTeam['data']=Object.values(score[index]); 
+    return toCreateDataOfEachTeam;
+  });
 
 
 

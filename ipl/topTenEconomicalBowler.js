@@ -47,7 +47,7 @@ function topTenEconomicalBowler(matches, deliveries) {
   });
   // console.log(sortedEconomyRate)
   const topTenEconomicalBowlerArray = sortedEconomyRate.slice(0, 10);
-  // console.log(topTenEconomicalBowler)
+  // console.log(topTenEconomicalBowlerArray);
   const topTenEconomicalBowlerObject = topTenEconomicalBowlerArray.map((item) => ({[item.name]: item.economy}));
   const topTenEconomicalBowler = Object.assign({}, ...topTenEconomicalBowlerObject);
   // console.log(topTenEconomicalBowler)
