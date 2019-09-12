@@ -9,7 +9,9 @@ function matchesPerYear(dataSet) {
         }
         return acc;
       }, {});
-  return matchesPerYear;
+  // return matchesPerYear;
+  matchesPerYears = {year: Object.keys(matchesPerYear), Matches: Object.values(matchesPerYear)};
+  return matchesPerYears;
 }
 
 module.exports = matchesPerYear;
