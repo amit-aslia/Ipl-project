@@ -1,3 +1,4 @@
+/* eslint-disable no-trailing-spaces */
 /* eslint-disable no-multiple-empty-lines */
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
@@ -15,7 +16,8 @@ function visualizeData(data) {
   const yearResult=teams.map((currentValue, index)=>{
     const toCreateDataOfEachTeam={};
     toCreateDataOfEachTeam['name']=currentValue;
-    toCreateDataOfEachTeam['data']=Object.values(score[index]); 
+    toCreateDataOfEachTeam['data']=Object.values(score[index]);
+ 
     return toCreateDataOfEachTeam;
   });
 

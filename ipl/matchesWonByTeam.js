@@ -12,9 +12,7 @@ function matchesWonPerYear(matches) {
   }, []);
   delete team[''];
   // console.log(team);
-  const teams = Object.keys(team).map(function(key) {
-    return key;
-  });
+  const teams = Object.keys(team);
 
 
   // console.log(teams)
@@ -28,7 +26,7 @@ function matchesWonPerYear(matches) {
     return acc;
   }, {});
   delete matchesWonPerYear[''];
-  // console.log(matchesWonPerYear)
+   console.log(matchesWonPerYear)
   const teamStat = {'Team': teams, 'valuePerYear': Object.values(matchesWonPerYear)};
   // console.log(teamStat)
   return teamStat;
