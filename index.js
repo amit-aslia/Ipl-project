@@ -1,6 +1,10 @@
 /* eslint-disable valid-jsdoc */
 /* eslint-disable max-len */
 /* eslint-disable require-jsdoc */
+const matchesPerYear=require('./ipl/matchesPerYear');
+const matchesWonPerYear=require('./ipl/matchesWonByTeam');
+const extraRunConceded=require('./ipl/extraRunConceded');
+const topTenEconomicalBowler=require('./ipl/topTenEconomicalBowler');
 const csvtoJSON = require('csvtojson');
 const writeJSONFile = require('write-json-file');
 csvtoJSON()
@@ -9,12 +13,6 @@ csvtoJSON()
       csvtoJSON()
           .fromFile('deliveries.csv')
           .then((deliveries) => {
-            const matchesPerYear=require('./ipl/matchesPerYear');
-            const matchesWonPerYear=require('./ipl/matchesWonByTeam');
-            const extraRunConceded=require('./ipl/extraRunConceded');
-            const topTenEconomicalBowler=require('./ipl/topTenEconomicalBowler');
-
-
             // Function Calling
             matchesPerYear(matches);
             const teamStat = matchesWonPerYear(matches);
